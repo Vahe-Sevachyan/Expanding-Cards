@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&display=swap");
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(120deg, #3d7992, #447d91, #156385);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+h3 {
+  font-size: 3rem;
+  font-family: lato;
+  color: rgb(226, 169, 12);
+}
+/* .active1,
+.active2,
+.active3,
+.active4, 
+https://unsplash.com/photos/NHJE7yeA5rE
+*/
+
+#active1 {
+  background-image: url(images/brazil.webp);
+}
+#active2 {
+  background-image: url(images/usa.webp);
+}
+#active3 {
+  background-image: url(images/ManzanillaBeach.webp);
+}
+#active4 {
+  background-image: url(images/Argentina.webp);
+}
+#active5 {
+  background-image: url(images/spain.webp);
+}
+.container {
+  display: flex;
+  width: 90vw;
+}
+.panel {
+  text-align: center;
+  background-size: cover 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  height: 80vh;
+  object-fit: cover;
+  border-radius: 5rem;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 1.5rem;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+.panel h3 {
+  font-size: 1.5rem;
+  position: relative;
+  top: 65rem;
+  left: 1rem;
+  opacity: 0;
+}
+.panel.active h3 {
+  transition: ease-in-out 1.5s;
+  opacity: 1;
+}
+.panel.active {
+  flex: 7;
+}
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+    margin: auto;
+    overflow-x: hidden;
+  }
+  .panel:nth-last-of-type(4),
+  .panel:nth-last-of-type(5) {
+    display: none;
+  }
+  .panel h3 {
+    top: 55rem;
+    left: -0.1rem;
+  }
+}
